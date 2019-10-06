@@ -230,7 +230,7 @@ def encrypt_text(fname):
     f2.close()
 
 def decrypt_text(fname):
-    print ("Decrypting message with public key ", rsa_public_key ," . . .")
+    print ("Decrypting the message with public key ", rsa_public_key ," . . .")
     f1=open("enc_"+fname,"rt")
     msg=f1.read()
     f1.close()
@@ -302,7 +302,7 @@ ftpClient = FTPclient(address, port, data_port)
 ftpClient.start()
 
 while(True):
-    print("Enter your choice:\n1:Encrypt Image\n2:Decrypt Image\n3:Encrypt Audio\n4:Decrypt Audio\n5:Encrypt Text\n6:Decrypt Text\nOther: End\n\n ")
+    print("Enter your choice of data to send:\n1:Encrypt Image\n2:Decrypt Image\n3:Encrypt Audio\n4:Decrypt Audio\n5:Encrypt Text\n6:Decrypt Text\nOther: End\n\n ")
     choice=int(input(""))
     if choice==1:
         encrypt_image()
